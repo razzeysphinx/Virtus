@@ -6,6 +6,7 @@ import {
   isIndexableDeployment,
 } from "@/lib/seo";
 import { StructuredData } from "@/components/StructuredData";
+import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -112,7 +113,7 @@ export default function RootLayout({
     >
       <body>
         <StructuredData />
-        {children}
+        <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>
     </html>
   );
